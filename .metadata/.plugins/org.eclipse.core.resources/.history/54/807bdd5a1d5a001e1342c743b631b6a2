@@ -1,0 +1,33 @@
+package utils;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.Properties;
+
+public class PropertyReader {
+	
+	
+	
+	
+	public static String readProperty(String key)
+	{
+		try {
+		Properties properties = new Properties();
+		System.out.println("PropertieReader Class=>> Mera Propeties Hai ref"+properties);
+		InputStream inputStream	= new FileInputStream(System.getProperty("\\resources\\"+"db.properties"));
+		System.out.println("PropertieReader Class=>> Mera File Hai inputstream"+inputStream);
+		properties.load(inputStream);
+		return (String) properties.get(key);
+
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+		
+		return key;
+		
+	}
+	
+	
+
+}

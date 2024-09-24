@@ -1,0 +1,23 @@
+package utils;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+public class PropertyReader {
+	
+	
+	
+	
+	public static String readProperty(String key)
+	{
+		
+		Properties properties = new Properties();
+		new FileInputStream(System.getProperty("user.dir")+"\\resources\\"+"db.properties"));
+		
+		return key;
+		
+	}
+	
+	
+
+}
